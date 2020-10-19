@@ -1,16 +1,6 @@
 /*
  * AqiSensor: Simple AQI sensor project that emits data to an LCD display.
- *
- * The physical hardware consists of:
- *
- * (1) an Arduino Uno R3 board
- * (2) an SDS011 sensor
- * (3) an LCD display with 2 rows and 16 columns (LCD1602)
- *
- * The wiring was copied from the Elegoo demo sketch for the LCD display.
- * Wiring the SDS011 is straightforward: it can be used as a serial device.  The
- * TX/RX are wired to pins 4 and 5 for software-based serial (see below) and
- * 5v/GND are wired to the corresponding pins on the Arduino board.
+ * See README.adoc for more information.
  */
 
 #include <SdsDustSensor.h>

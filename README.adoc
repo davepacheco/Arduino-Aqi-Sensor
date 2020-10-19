@@ -1,0 +1,29 @@
+:toc: left
+:icons: font
+
+= Arduino AQI sensor
+
+This sketch implements an AQI sensor project.  It uses:
+
+. an Arduino Uno R3 board
+. an SDS011 sensor
+. an LCD1602 display (2 rows and 16 columns)
+
+The LCD displays something like:
+
+[source,text]
+----
+pm25 1.70  1:23
+AQI 7 AQ&U   17
+----
+
+In this case, the sensor measured 1.70 micrograms per cubic meter of pm2.5 concentration, which corresponds to an AQI of 7.  The AQ&U-adjusted AQI is 17.  For more on adjustments like AQ&U, see https://thebolditalic.com/understanding-purpleair-vs-airnow-gov-measurements-of-wood-smoke-pollution-562923a55226[Understanding PurpleAir vs. AirNow.gov Measurements of Smoke Pollution].
+
+The wiring for the LCD display was copied from the Elegoo demo sketch for the LCD display.  Wiring the SDS011 is straightforward: it can be used as a serial device.  The TX/RX are wired to pins 4 and 5 for software-based serial (see below) and 5v/GND are wired to the corresponding pins on the Arduino board.
+
+== Future projects
+
+* add an RGB LED whose color reflects how hazardous the AQI reading is
+* add a wifi shield so that it can report data wirelessly
+* make it permanent / shrink it to a proto board
+* add an enclosure and portable power supply to make it more permanent
