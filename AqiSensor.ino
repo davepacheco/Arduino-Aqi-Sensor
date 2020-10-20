@@ -78,9 +78,11 @@ loop()
 	} else {
 		lcd.setCursor(0, 0);
 		if (timestamp < 3000) {
-			lcd.print("synchronizing");
+			lcd.print("Synchronizing...");
+			lcd.setCursor(0, 1);
+			lcd.print("No readings yet.");
 		} else {
-			lcd.print("error");
+			lcd.print("No sensor found.");
 		}
 	}
 
